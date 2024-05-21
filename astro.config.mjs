@@ -10,7 +10,7 @@ export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
 
   site: "https://www.zekobaugmbh.com",
-  outDir: "./docs",
+  /*  outDir: "./docs", */
   image: {
     domains: ["images.unsplash.com"],
   },
