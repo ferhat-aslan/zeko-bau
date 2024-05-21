@@ -1,0 +1,32 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import ContactSection from "@components/sections/ContactSection.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Contact | ${SITE.title}`;
+---
+
+<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.zekobaugmbh.com/kontakt",
+    url: "https://www.zekobaugmbh.com/kontakt",
+    name: "Kontakt | Zeko Bau GmbH",
+    description:
+      "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://www.zekobaugmbh.com",
+      name: "Zeko Bau GmbH",
+      description:
+        "zekobau offers top-tier hardware tools and expert construction services to meet all your project needs.",
+    },
+    inLanguage: "de-DE",
+  }}
+>
+  <ContactSection />
+</MainLayout>
