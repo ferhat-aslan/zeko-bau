@@ -6,7 +6,22 @@ import CardSmall from "@components/ui/cards/CardSmall.astro";
 import CardWide from "@components/ui/cards/CardWide.astro";
 import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
 import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
-import Test from "@images/clouds.jpg";
+import Beton1 from "@images/beton1.jpg";
+import Beton2 from "@images/beton2.jpg";
+import ConstructionWorkers from "@images/construction-workers.avif";
+import Est1 from "@images/est-1.jpg";
+import Est2 from "@images/est-2.jpg";
+import Est3 from "@images/est-3.jpg";
+import Estrich1 from "@images/estrich1.jpg";
+import Estrich2 from "@images/estrich2.jpg";
+import Estrich3 from "@images/estrich3.jpg";
+import Estrich4 from "@images/estrich4.webp";
+import Plaster1 from "@images/plaster-1.jpg";
+import Plaster2 from "@images/plaster-2.jpg";
+import Plaster3 from "@images/plaster-3.jpg";
+import Plaster4 from "@images/plaster-4.jpg";
+import Putzbau1 from "@images/putzbau1.jpg";
+import Putzbaus from "@images/putzbaus.jpg";
 // Importing necessary functions from Astro
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -106,7 +121,7 @@ const pageTitle: string = `Projektbilder | ${SITE.title}`;
     <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
     <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
     <section
-      class="relative grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
+      class="relative grid grid-cols-1 place-items-center gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
     >
       {
         false &&
@@ -119,11 +134,26 @@ const pageTitle: string = `Projektbilder | ${SITE.title}`;
             }
           })
       }
-      <Image src={Test} alt="" class={imageClass} />
+      <Image src={Beton1} alt="" class={imageClass} />
+      <Image src={Beton2} alt="" class={imageClass} />
+      <Image src={Plaster1} alt="" class={imageClass} />
+      <Image src={ConstructionWorkers} alt="" class={imageClass} />
+      <Image src={Est1} alt="" class={imageClass} />
+      <Image src={Plaster2} alt="" class={imageClass} />
+      <Image src={Est2} alt="" class={imageClass} />
+      <Image src={Plaster3} alt="" class={imageClass} />
+      <Image src={Est3} alt="" class={imageClass} />
+      <Image src={Plaster4} alt="" class={imageClass} />
+      <Image src={Estrich1} alt="" class={imageClass} />
+      <Image src={Putzbau1} alt="" class={imageClass} />
+      <Image src={Estrich2} alt="" class={imageClass} />
+      <Image src={Putzbaus} alt="" class={imageClass} />
+      <Image src={Estrich3} alt="" class={imageClass} />
+      <Image src={Estrich4} alt="" class={imageClass} />
     </section>
   </div>
   <!--Features statistics section-->
-  <FeaturesStatsAlt
+  <!-- <FeaturesStatsAlt
     title="Why Choose zekobau?"
     subTitle="Transform your ideas into tangible results with zekobau tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
     benefits={[
@@ -132,9 +162,9 @@ const pageTitle: string = `Projektbilder | ${SITE.title}`;
       "Customer support dedicated to your project's success.",
     ]}
   />
-  <!--Testimonials section-->
+ 
   <TestimonialsSectionAlt
     title="What Our Customers Say"
     testimonials={testimonials}
-  />
+  /> -->
 </MainLayout>

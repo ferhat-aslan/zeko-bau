@@ -5,8 +5,10 @@ import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro"
 import DeStrings from "@utils/navigation.ts";
 import EnStrings from "@utils/en/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
-import BrandLogo from "@components/BrandLogo.astro";
+import BrandLogoBlack from "@images/zeko-bau-logo-black.png";
+import BrandLogoWhite from "@images/zeko-bau-logo-white.png";
 import { SITE } from "@data/constants";
+import { Image } from "astro:assets";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "en" ? EnStrings : DeStrings;
@@ -29,7 +31,17 @@ const crafted: string =
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
-        <BrandLogo class="h-auto w-32" />
+
+        <Image
+          src={BrandLogoBlack}
+          alt={""}
+          class="flex h-auto w-32 dark:hidden"
+        />
+        <Image
+          src={BrandLogoWhite}
+          alt={""}
+          class="hidden h-auto w-32 dark:flex"
+        />
       </div>
       <!-- An array of links for Product and Company sections -->
       {
