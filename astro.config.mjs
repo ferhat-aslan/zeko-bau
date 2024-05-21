@@ -8,7 +8,9 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
+
   site: "https://www.zekobaugmbh.com",
+  outDir: "./docs",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -112,6 +114,7 @@ export default defineConfig({
     }),
   ],
   output: "static",
+
   experimental: {
     clientPrerender: true,
     directRenderScript: true,
