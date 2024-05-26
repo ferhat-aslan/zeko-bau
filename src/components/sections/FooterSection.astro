@@ -15,13 +15,15 @@ const strings = Astro.currentLocale === "en" ? EnStrings : DeStrings;
 
 // Define the variables that will be used in this component
 const sectionThreeTitle: string =
-  Astro.currentLocale === "en" ? "Rester à jour" : "Stay up to date";
+  Astro.currentLocale === "en"
+    ? "Stay up to date"
+    : "Auf dem Laufenden bleiben";
 const sectionThreeContent: string =
   Astro.currentLocale === "en"
-    ? "Restez informé des derniers outils et des offres exclusives."
-    : "Stay updated with the latest tools and exclusive deals.";
+    ? "Stay updated with the latest tools and exclusive deals."
+    : "Auf dem Laufenden bleiben";
 const crafted: string =
-  Astro.currentLocale === "en" ? "Fabriqué par" : "Crafted by";
+  Astro.currentLocale === "en" ? "Crafted by" : "Geschaffen von";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -94,10 +96,8 @@ const crafted: string =
           {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://sobstvennoai.dev"
-            target="_blank"
-            rel="noopener noreferrer">sobstvennoAI</a
-          >.
+            href=""
+            rel="noopener noreferrer"></a>.
         </p>
       </div>
 

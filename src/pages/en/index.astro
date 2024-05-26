@@ -6,18 +6,15 @@ import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
-import FAQ from "@components/sections/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
-import faqs from "@data/en/faqs.json";
 import features from "@data/en/features.json";
-import pricing from "@data/en/pricing.json";
+
 import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
+import Estrich from "@images/estrich1.jpg";
+import Beton from "@images/beton1.jpg";
+import Putz from "@images/putzbaus.jpg";
+import Boden from "@images/estrich2.jpg";
+
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const avatarSrcs: Array<string> = [
@@ -26,120 +23,91 @@ const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
 ];
+
+const deFlag = `<div
+  class="flex w-8 flex-col items-start justify-start  rounded-md border-2 border-white"
+>
+  <span class="flex h-2 w-full bg-black rounded-t-md"></span>
+  <span class="flex h-2 w-full bg-red-500"></span>
+  <span class="flex h-2 w-full bg-yellow-500 rounded-b-md"></span>
+</div>`;
 ---
 
-<MainLayout lang="en">
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Découvrez zekobau sur GitHub"
-    url="https://github.com/mearashadowfax/zekobau"
-  />
-
+<MainLayout lang={"en"}>
   <HeroSection
-    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">zekobau</span>`
-    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
-    primaryBtn="Commencez à explorer"
+    title=`Building the future with <span
+    class="text-white dark:text-black bg-black dark:bg-white rounded-2xl px-3">Zeko Bau</span>`
+    subTitle="High-quality screed construction, concrete construction, floor coating and plastering services for every project requirement."
+    primaryBtn="Show projects"
     primaryBtnURL={getRelativeLocaleUrl("en", "products")}
-    secondaryBtn="Contacter l'équipe commerciale"
+    secondaryBtn="Contact"
     secondaryBtnURL={getRelativeLocaleUrl("en", "contact")}
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
-    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
+    reviews=`More than <span class="font-bold">12,8k</span> Reviews`
     src={heroImage}
-    alt="Pile de boîtes de produits zekobau contenant des outils matériels assortis"
+    alt="Stack of Zeko Bau product boxes containing assorted hardware tools"
   />
 
   <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+    title="Industry leaders rely on us"
+    subTitle="Experience the reliability chosen by industry giants."
   />
 
   <FeaturesGeneral
-    title="Répondre aux exigences de l'industrie"
-    subTitle="Chez zekobau, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
+    title=`Meeting the requirements of the industry (DIN standard)  ${deFlag}`
+    subTitle="At Zeko Bau, we take on the unique challenges of the construction sector. We want to help you overcome obstacles and achieve your goals."
     src={featureImage}
-    alt="Produits zekobau dans des boîtes flottantes"
+    alt="lorem"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">zekobau</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
+    title=`Customise the <span class="text-yellow-500 dark:text-yellow-400">Zeko Bau</span> range perfectly to your construction needs. `
     tabs={[
       {
-        heading: "Outils de pointe",
+        heading: "Screed construction",
         content:
-          "Optimisez vos projets avec les outils de pointe de zekobau. Faites l'expérience d'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.",
+          "Our company specialises in interior and exterior Screed Construction. We ensure a perfect surface, whether it's for protection, insulation or aesthetics. Our experts work precisely and efficiently to achieve the best results.",
         svg: "tools",
-        src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
+        src: Estrich,
+        alt: "interior and exterior Screed Construction",
         first: true,
       },
       {
-        heading: "Tableaux de bord intuitifs",
+        heading: "Concrete wall",
         content:
-          "Naviguez facilement avec les tableaux de bord intuitifs de zekobau. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.",
+          "As professionals in concrete wall construction, we offer durable and robust solutions for your building projects. Our concrete walls are not only stable, but also aesthetically pleasing to fulfil our customers' requirements.",
         svg: "dashboard",
-        src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
+        src: Beton,
+        alt: "A screenshot or graphic representation of the intuitive dashboard",
         second: true,
       },
       {
-        heading: "Fonctionnalités robustes",
+        heading: "Plaster construction",
         content:
-          "Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de zekobau sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.",
+          "We are your reliable partner for professional plaster construction. We realise projects of all sizes with precision and care - from simple wall cladding to complex façade design.",
+        svg: "dashboard",
+        src: Putz,
+        alt: " plaster construction",
+        second: true,
+      },
+      {
+        heading: "Floor coating",
+        content:
+          "As a leading specialist in floor coating, we offer innovative solutions for industrial, commercial and private areas. Our high-quality coating systems not only protect your floors from wear and chemical influences, but also improve the safety and aesthetics of your premises.",
         svg: "house",
-        src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        src: Boden,
+        alt: "lorem",
       },
     ]}
   />
-
-  <TestimonialsSection
-    title="Accélérez vos projets"
-    subTitle="Chez zekobau, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie."
-    testimonials={[
-      {
-        content:
-          "zekobau a considérablement augmenté l'efficacité de notre projet. La configuration a été instantanée et leurs temps de réponse rapides sont phénoménaux. Vraiment un changement de jeu dans le support matériel et de construction !",
-        author: "Samantha Ruiz",
-        role: "Directrice des opérations | ConstructIt Inc.",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      },
-    ]}
-    statistics={[
-      {
-        count: "70k+",
-        description:
-          "clients équipés — des bricoleurs aux grandes entreprises de construction",
-      },
-      {
-        count: "35%",
-        description:
-          "hausse de l'efficacité des projets avec les outils et services de zekobau",
-      },
-      {
-        count: "15,3%",
-        description:
-          "réduction des coûts de maintenance rapportée par des clients à long terme",
-      },
-      {
-        count: "2x",
-        description:
-          "assemblage plus rapide grâce à des solutions de fixation innovantes",
-      },
-    ]}
-  />
-
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Construisons ensemble"
-    subTitle="zekobau est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI."
+    title="Let's build together"
+    subTitle="We are ready with our team of experts."
     url="https://github.com/mearashadowfax/zekobau"
   />
 </MainLayout>
