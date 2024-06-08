@@ -22,6 +22,9 @@ import Plaster3 from "@images/plaster-3.jpg";
 import Plaster4 from "@images/plaster-4.jpg";
 import Putzbau1 from "@images/putzbau1.jpg";
 import Putzbaus from "@images/putzbaus.jpg";
+import Cestr1 from "@images/completed-estrich-1.jpeg";
+import Cestr2 from "@images/completed-estrich-2.jpeg";
+import Cestr3 from "@images/completed-estrich-3.jpeg";
 // Importing necessary functions from Astro
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -88,6 +91,10 @@ const pageTitle: string = `Projektbilder | ${SITE.title}`;
     <section
       class="relative grid grid-cols-1 place-items-center gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
     >
+      <Image src={Cestr1} alt="" class={imageClass} />
+      <Image src={Cestr2} alt="" class={imageClass} />
+      <Image src={Cestr3} alt="" class={imageClass} />
+
       <Image src={Beton1} alt="" class={imageClass} />
       <Image src={Beton2} alt="" class={imageClass} />
       <Image src={Plaster1} alt="" class={imageClass} />
