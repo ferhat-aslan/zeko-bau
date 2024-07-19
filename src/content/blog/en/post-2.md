@@ -1,5 +1,5 @@
 ---
-title: "Améliorer la Sécurité et l'Artisanat avec les Services de Construction de zekobau"
+title: "XAméliorer la Sécurité et l'Artisanat avec les Services de Construction de zekobau"
 description: "Services de construction de qualité pour des résultats durables"
 author: "Brad"
 authorImage: "@/images/blog/brad.avif"

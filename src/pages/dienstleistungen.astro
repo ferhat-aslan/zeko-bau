@@ -16,6 +16,12 @@ import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
 import { SITE } from "@data/constants";
+import Est1 from "@images/est-1.jpg";
+import Estrich1 from "@images/estrich1.jpg";
+import Plaster4 from "@images/plaster-4.jpg";
+import Beton1 from "@images/beton1.jpg";
+import Putzbau1 from "@images/putzbau1.jpg";
+import Estrich2 from "@images/estrich2.jpg";
 
 interface Article {
   isRightSection: boolean;
@@ -36,59 +42,42 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Estrichbau Dienstleistung",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Estrichbau ist eine spezialisierte Dienstleistung im Bauwesen, die sich auf das Verlegen von Estrichen konzentriert. Estrich bildet die Grundlage für verschiedene Bodenbeläge und sorgt für eine ebene und stabile Oberfläche. Unsere Experten bieten professionelle Estricharbeiten, die höchsten Qualitätsstandards entsprechen. Wir verwenden modernste Techniken und Materialien, um langlebige und belastbare Estrichlösungen zu gewährleisten. Vertrauen Sie auf unsere Erfahrung und Kompetenz für Ihr Bauprojekt.",
     single: false,
-    imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgOne: Est1,
+    imgOneAlt: "Estrichbau ist eine spezialisierte Dienstleistung im Bauwesen",
+    imgTwo: Estrich1,
+    imgTwoAlt: "Estrichbau Dienstleistung",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Putzbau Dienstleistung",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, zekobau offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+      "Putzbau ist eine wesentliche Dienstleistung im Baugewerbe, die das Verputzen von Wänden und Decken umfasst. Der Putz dient sowohl der ästhetischen Aufwertung als auch dem Schutz und der Verbesserung der Wärmedämmung von Gebäuden. Unsere erfahrenen Fachkräfte führen Putzarbeiten präzise und effizient aus, unter Einsatz hochwertiger Materialien und fortschrittlicher Techniken. Wir garantieren langlebige, gleichmäßige und professionelle Ergebnisse. Vertrauen Sie auf unser Know-how für Ihr Bauvorhaben.",
+    img: Plaster4,
+    imgAlt: "Putzbau ist eine wesentliche Dienstleistung im Baugewerbe",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Betonmauer Dienstleistung",
     subTitle:
-      "Effective project management is at the heart of any successful build. zekobau provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Unsere Betonmauer-Dienstleistung bietet Ihnen hochwertige und langlebige Lösungen für alle Bauprojekte. Wir spezialisieren uns auf das Errichten von stabilen und robusten Betonmauern, die sowohl funktional als auch ästhetisch ansprechend sind. Mit unserer umfassenden Expertise und dem Einsatz modernster Technologien gewährleisten wir präzise und effiziente Arbeit. Vertrauen Sie auf unsere Fachkompetenz und Erfahrung für zuverlässige und professionelle Betonmauerarbeiten.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgOne: Beton1,
+    imgOneAlt: "Betonmauer-Dienstleistung ",
+    imgTwo: Putzbau1,
+    imgTwoAlt:
+      "Betonmauer-Dienstleistung bietet Ihnen hochwertige und langlebige Lösungen für alle Bauprojekte",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Bodenbeschichtung Dienstleistung",
     subTitle:
-      "Our commitment to your project doesn't end at completion. zekobau offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
-  },
-  {
-    isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
-    subTitle:
-      "For our larger enterprise clients, zekobau offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
-    single: false,
-    imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
-    btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+      "Unsere Bodenbeschichtungs-Dienstleistung bietet maßgeschneiderte Lösungen für verschiedene Anwendungsbereiche. Wir verwenden hochwertige Materialien und modernste Technologien, um strapazierfähige, langlebige und ästhetisch ansprechende Bodenbeschichtungen zu gewährleisten. Ob für Industrie, Gewerbe oder private Räume – unser erfahrenes Team sorgt für eine präzise und effiziente Umsetzung. Vertrauen Sie auf unsere Fachkompetenz für professionelle und zuverlässige Bodenbeschichtungen.",
+    img: Estrich2,
+    imgAlt: "Bodenbeschichtungs-Dienstleistung ",
   },
 ];
 
@@ -102,26 +91,26 @@ const pageTitle: string = `Services | ${SITE.title}`;
     "@type": "WebPage",
     "@id": "https://www.zekobaugmbh.com/services",
     url: "https://www.zekobaugmbh.com/services",
-    name: "Expert Consultation Services | zekobau",
+    name: "Experten für Bauleistungen - Estrichbau - Betonmauer - Putzbau - Bodenbeschichtung | Zeko Bau",
     description:
-      "Uniting expertise with your vision, zekobau provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+      "Zeko Bau verbindet Fachwissen mit Ihren Visionen und bietet einen außergewöhnlichen Service und umfassende Lösungen im Bauwesen, von der Beratung bis zur Fertigstellung des Projekts.",
     isPartOf: {
       "@type": "WebSite",
       url: "https://www.zekobaugmbh.com",
       name: "Zeko Bau",
       description:
-        "zekobau offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Zeko Bau bietet fachkundige Baudienstleistungen, die alle Ihre Projektanforderungen erfüllen.",
     },
     inLanguage: "de-DE",
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At zekobau, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Fachwissen mit Ihrer Vision vereinen"
+    subTitle="Wir bei Zeko Bau sind stolz darauf, umfassende Lösungen und außergewöhnlichen Service in der Bauindustrie zu bieten. Unser erfahrenes Team widmet sich der Aufgabe, Ihr Projekt von der Planung bis zur Fertigstellung mit einer Reihe spezialisierter Dienstleistungen zu unterstützen."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnTitle="Konsultation vereinbaren"
+    btnURL="/kontakt"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -161,22 +150,22 @@ const pageTitle: string = `Services | ${SITE.title}`;
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At zekobau, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
+    title="Die Zahlen"
+    subTitle="Unser Engagement für Qualität und Zuverlässigkeit zeigt sich in jedem Projekt, das wir durchführen. Wir von Zeko Bau sind bestrebt, branchenführende Dienstleistungen zu erbringen, die sicherstellen, dass Ihre Bauprojekte von Dauer sind."
     mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with zekobau as exceptional"
+    mainStatSubTitle="unserer Kunden bewerten ihre Erfahrung mit Zeko Bau als außergewöhnlich"
     stats={[
       {
         stat: "99.8%",
-        description: "project completion rate",
+        description: "Projektabschlussquote",
       },
       {
         stat: "5,000+",
-        description: "successful installations",
+        description: "erfolgreiche Installationen",
       },
       {
         stat: "85%",
-        description: "client growth year-over-year",
+        description: "Kundenwachstum von Jahr zu Jahr",
       },
     ]}
   />

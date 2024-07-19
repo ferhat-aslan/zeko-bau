@@ -1,5 +1,5 @@
 ---
-title: "Simplifiez l'Approvisionnement et Restez dans les Limites du Budget avec zekobau"
+title: "XSimplifiez l'Approvisionnement et Restez dans les Limites du Budget avec zekobau"
 description: "Outils abordables et durables pour des projets de construction efficaces"
 author: "Olga Zabegina"
 role: "Directrice Marketing Stratégique"

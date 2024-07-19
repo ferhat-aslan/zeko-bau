@@ -16,6 +16,13 @@ import aerialView from "@images/aerial-view.avif";
 import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
+import { SITE } from "@data/constants";
+import Est1 from "@images/est-1.jpg";
+import Estrich1 from "@images/estrich1.jpg";
+import Plaster4 from "@images/plaster-4.jpg";
+import Beton1 from "@images/beton1.jpg";
+import Putzbau1 from "@images/putzbau1.jpg";
+import Estrich2 from "@images/estrich2.jpg";
 
 interface Article {
   isRightSection: boolean;
@@ -36,91 +43,74 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Fournir des conseils d'experts",
+    title: "Screed construction service",
     subTitle:
-      "Se lancer dans un projet de construction peut être accablant. Avec nos services de consultation professionnelle, nous vous guidons à chaque étape, en veillant à ce que vous preniez des décisions éclairées. Que vous soyez un passionné du bricolage ou un entrepreneur qualifié, nos experts sont là pour vous offrir des conseils sur mesure sur la sélection de produits, l'envergure du projet et la conformité aux réglementations locales.",
+      "Screed construction is a specialized service in the construction industry that focuses on the laying of screeds. Screed forms the basis for various floor coverings and ensures an even and stable surface. Our experts offer professional screed work that meets the highest quality standards. We use state-of-the-art techniques and materials to ensure durable and resilient screed solutions. Rely on our experience and expertise for your construction project.",
     single: false,
-    imgOne: blueprints,
-    imgOneAlt: "Plans et tablette numérique avec des plans de construction.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Personne travaillant au bureau",
+    imgOne: Est1,
+    imgOneAlt: "Estrichbau ist eine spezialisierte Dienstleistung im Bauwesen",
+    imgTwo: Estrich1,
+    imgTwoAlt: "Estrichbau Dienstleistung",
   },
   {
     isRightSection: false,
-    title: "Transformer les conceptions en réalité",
+    title: "Plastering service",
     subTitle:
-      "Nos artisans qualifiés apportent précision et excellence à chaque projet de construction. Des installations mineures aux travaux structuraux substantiels, zekobau offre des services de construction fiables pour concrétiser vos plans. Nous assurons les normes les plus élevées de sécurité et de savoir-faire, en utilisant des outils et des matériaux de haute qualité de notre vaste inventaire.",
-    img: beforeAfter,
-    imgAlt: "Chantier de construction avant et après",
-    btnExists: true,
-    btnTitle: "En savoir plus",
-    btnURL: "#",
+      "Plastering is an essential service in the construction industry that involves plastering walls and ceilings. Plastering is used both for aesthetic enhancement and to protect and improve the thermal insulation of buildings. Our experienced specialists carry out plastering work precisely and efficiently, using high-quality materials and advanced techniques. We guarantee long-lasting, even and professional results. Rely on our expertise for your building project.",
+    img: Plaster4,
+    imgAlt: "Putzbau ist eine wesentliche Dienstleistung im Baugewerbe",
   },
   {
     isRightSection: true,
-    title: "Naviguer dans les projets avec une supervision professionnelle",
+    title: "Concrete wall service",
     subTitle:
-      "La gestion de projet efficace est au cœur de toute construction réussie. zekobau offre une planification approfondie et des services de gestion solides qui maintiennent votre projet dans les délais et dans le budget. Laissez-nous gérer les complexités de la coordination des flux de travail, de l'allocation des ressources et de la communication avec les parties prenantes pendant que vous vous concentrez sur votre vision.",
+      "Our concrete wall service offers you high-quality and durable solutions for all construction projects. We specialize in building stable and robust concrete walls that are both functional and aesthetically pleasing. With our extensive expertise and the use of state-of-the-art technologies, we guarantee precise and efficient work. Trust our expertise and experience for reliable and professional concrete wall work.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Ouvriers du bâtiment orchestrant un projet",
-    imgTwo: aerialView,
-    imgTwoAlt: "Vue aérienne d'une construction gérée",
+    imgOne: Beton1,
+    imgOneAlt: "Betonmauer-Dienstleistung ",
+    imgTwo: Putzbau1,
+    imgTwoAlt:
+      "Betonmauer-Dienstleistung bietet Ihnen hochwertige und langlebige Lösungen für alle Bauprojekte",
   },
   {
     isRightSection: false,
-    title: "Garantir des performances durables",
+    title: "Floor coating service",
     subTitle:
-      "Notre engagement envers votre projet ne s'arrête pas à son achèvement. zekobau propose des services de maintenance et de support continus pour assurer la longévité et les performances de votre construction. Des vérifications régulières à l'assistance en cas d'urgence, notre équipe réactive est là pour vous fournir un soutien sans faille.",
-    img: usingTools,
-    imgAlt:
-      "Homme en gilet orange et noir portant un casque blanc tenant un outil électrique jaune et noir",
-  },
-  {
-    isRightSection: true,
-    title: "Élaboration de stratégies sur mesure pour des défis uniques",
-    subTitle:
-      "Pour nos clients d'entreprise de plus grande envergure, zekobau propose des solutions personnalisées conçues pour répondre à des défis spécifiques de l'industrie. En comprenant vos besoins uniques, nous concevons des stratégies sur mesure visant à optimiser vos opérations, à améliorer l'efficacité et à faire avancer votre entreprise.",
-    single: false,
-    imgOne: progressBuilding,
-    imgOneAlt: "Structure de bâtiment en cours de construction",
-    imgTwo: underConstruction,
-    imgTwoAlt: "Bâtiment marron et gris en construction",
-    btnExists: true,
-    btnTitle: "Lire la suite",
-    btnURL: "#",
+      "Our floor coating service offers customized solutions for various applications. We use high-quality materials and state-of-the-art technologies to ensure hard-wearing, durable and aesthetically pleasing floor coatings. Whether for industrial, commercial or private spaces, our experienced team ensures precise and efficient implementation. Put your trust in our expertise for professional and reliable floor coatings.",
+    img: Estrich2,
+    imgAlt: "Bodenbeschichtungs-Dienstleistung ",
   },
 ];
+const pageTitle: string = `Services | ${SITE.title}`;
 ---
 
 <MainLayout
-  title="Services | zekobau"
-  lang="en"
+  title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.zekobaugmbh.com/en/services",
-    url: "https://www.zekobaugmbh.com/en/services",
-    name: "Services de Consultation d'Experts | zekobau",
+    "@id": "https://www.zekobaugmbh.com/services",
+    url: "https://www.zekobaugmbh.com/services",
+    name: "Expert Construction Services | Zeko Bau | Screed | Plastering | Concrete Wall | Floor Coating",
     description:
-      "Unissant l'expertise à votre vision, zekobau fournit un service exceptionnel et des solutions complètes dans le secteur du matériel et de la construction, de la consultation à l'achèvement du projet.",
+      "Uniting expertise with your vision, Zeko Bau provides exceptional service and comprehensive solutions in the  construction industry, from consultation to project completion.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://www.zekobaugmbh.com/en",
-      name: "zekobau",
+      url: "https://www.zekobaugmbh.com",
+      name: "Zeko Bau",
       description:
-        "zekobau propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
+        "Zeko Bau offers top-tierexpert construction services to meet all your project needs.",
     },
-    inLanguage: "en",
+    inLanguage: "en-EN",
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Unir l'expertise à votre vision"
-    subTitle="Chez zekobau, nous sommes fiers de fournir des solutions complètes et un service exceptionnel dans l'industrie du matériel et de la construction. Notre équipe expérimentée est dédiée à soutenir votre projet de sa conception à son achèvement avec une gamme de services spécialisés."
+    title="Uniting Expertise with Your Vision"
+    subTitle="At Zeko Bau, we take pride in providing comprehensive solutions and exceptional service in thehardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
     btnExists={true}
-    btnTitle="Planifier une consultation"
-    btnURL={getRelativeLocaleUrl("en", "#")}
+    btnTitle="Schedule a Consultation"
+    btnURL="#"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -160,22 +150,22 @@ const articles: Article[] = [
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
-    title="Par les chiffres"
-    subTitle="Notre engagement envers la qualité et la fiabilité est évident dans chaque projet que nous entreprenons. Chez zekobau, nous nous engageons à fournir des services de premier plan dans l'industrie qui garantissent que vos projets de construction sont conçus pour durer."
+    title="By the Numbers"
+    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At Zeko Bau, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
     mainStatTitle="96%"
-    mainStatSubTitle="de nos clients évaluent leur expérience avec zekobau comme exceptionnelle"
+    mainStatSubTitle="of our clients rate their experience with Zeko Bau as exceptional"
     stats={[
       {
-        stat: "99,8%",
-        description: "taux de réalisation de projets",
+        stat: "99.8%",
+        description: "project completion rate",
       },
       {
-        stat: "5 000+",
-        description: "installations réussies",
+        stat: "5,000+",
+        description: "successful installations",
       },
       {
         stat: "85%",
-        description: "croissance client année après année",
+        description: "client growth year-over-year",
       },
     ]}
   />
